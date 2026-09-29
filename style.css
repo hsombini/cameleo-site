@@ -1,0 +1,30 @@
+:root {
+  --bg: #f3f7f4; --card: #ffffff; --ink: #0f1f1a; --mute: #5b6b65; --line: #e1e9e4;
+  --primary: #0b7a55; --lime: #c6f432;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0c1411; --card: #15201c; --ink: #e7f0eb; --mute: #93a39c; --line: #24332d; --primary: #3ddc97; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--primary); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 26px; letter-spacing: -.5px; color: var(--ink); text-decoration: none; }
+.logo img { width: 40px; height: 40px; border-radius: 11px; }
+nav.top a { margin-left: 14px; color: var(--mute); text-decoration: none; font-size: 15px; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.05; letter-spacing: -1.5px; margin: 24px 0 14px; font-weight: 900; }
+h2 { font-size: 24px; letter-spacing: -.3px; margin: 30px 0 8px; }
+.lead { font-size: 20px; color: var(--mute); max-width: 34em; }
+.badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 26px; }
+.badge { background: color-mix(in srgb, var(--lime) 60%, transparent); color: var(--ink); border-radius: 20px; padding: 6px 12px; font-weight: 800; font-size: 14px; }
+.cta { display: inline-block; background: var(--primary); color: #fff; font-weight: 800; padding: 14px 22px; border-radius: 16px; text-decoration: none; }
+@media (prefers-color-scheme: dark) { .cta { color: #052e1f; } }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 30px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+.card h3 { margin: 0 0 4px; font-size: 18px; }
+.card p { margin: 0; color: var(--mute); font-size: 15px; }
+.doc h2 { font-size: 20px; }
+.muted { color: var(--mute); }
+footer { color: var(--mute); font-size: 14px; padding: 40px 0; border-top: 1px solid var(--line); margin-top: 40px; }
