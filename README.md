@@ -1,8 +1,10 @@
-# cameleo-site
+# cameleo-site (moved)
 
-Landing page, privacy policy (`/privacy`) and `app-ads.txt` for the Cameleo Android app
-(`tk.indiecompany.cameleo`). Served by GitHub Pages.
+**This repo is retired.** Since 2026-10-02 the site at https://cameleo.varella.ovh is served from
+`www/cameleo.varella.ovh/` in [hsombini/sites](https://github.com/hsombini/sites): one nginx
+container on sv01fipe (Coolify app `sites`), Cloudflare A record `cameleo → 89.106.84.199`
+(DNS only, Let's Encrypt via Traefik). Edit the site there; pushing to its `main` redeploys.
 
-To move it to `cameleo.varella.ovh`: add a proxied CNAME `cameleo → hsombini.github.io` in
-Cloudflare, add a `CNAME` file with `cameleo.varella.ovh` here, and update the website /
-privacy URLs in Play Console and AdMob. Old github.io links redirect automatically.
+GitHub Pages stays enabled with the `cameleo.varella.ovh` custom domain only so old
+`hsombini.github.io/cameleo-site/*` links keep redirecting to the live site. Changes made
+here are not deployed.
